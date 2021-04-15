@@ -10,4 +10,4 @@ name = "go"
 enabled = true
 
   [analyzers.meta]
-  import_root = "honnef.co/go/tools"
+  import_paths = ["honnef.co/go/tools"]

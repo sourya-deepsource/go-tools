@@ -384,7 +384,7 @@ func CheckErrorStrings(pass *analysis.Pass) (interface{}, error) {
 				}
 
 				s := constant.StringVal(k.Value)
-				if len(s) == 0 {
+				if s == "" {
 					continue
 				}
 				switch s[len(s)-1] {

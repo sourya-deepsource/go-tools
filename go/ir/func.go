@@ -905,7 +905,7 @@ func WriteFunction(buf *bytes.Buffer, f *Function) {
 					format.Node(buf2, f.Prog.Fset, s)
 					for {
 						line, err := buf2.ReadString('\n')
-						if len(line) == 0 {
+						if line == "" {
 							break
 						}
 						buf.WriteString("\t\t> ")

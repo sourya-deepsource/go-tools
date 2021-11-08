@@ -139,7 +139,7 @@ func failed(res runner.Result) []problem {
 		switch e := e.(type) {
 		case packages.Error:
 			msg := e.Msg
-			if len(msg) != 0 && msg[0] == '\n' {
+			if msg != "" && msg[0] == '\n' {
 				// TODO(dh): See https://github.com/golang/go/issues/32363
 				msg = msg[1:]
 			}

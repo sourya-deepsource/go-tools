@@ -3783,7 +3783,7 @@ func checkJSONTag(pass *analysis.Pass, field *ast.Field, tag string) {
 		return
 	}
 	//lint:ignore SA9003 TODO(dh): should we flag empty tags?
-	if len(tag) == 0 {
+	if tag == "" {
 	}
 	fields := strings.Split(tag, ",")
 	for _, r := range fields[0] {
@@ -3825,7 +3825,7 @@ func checkJSONTag(pass *analysis.Pass, field *ast.Field, tag string) {
 
 func checkXMLTag(pass *analysis.Pass, field *ast.Field, tag string) {
 	//lint:ignore SA9003 TODO(dh): should we flag empty tags?
-	if len(tag) == 0 {
+	if tag == "" {
 	}
 	fields := strings.Split(tag, ",")
 	counts := map[string]int{}
